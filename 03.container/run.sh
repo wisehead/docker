@@ -29,3 +29,9 @@ docker restart ubuntu-test
 #注意： 如果从这个容器退出，会导致容器的停止。
 docker attach 1e560fca3906
 docker exec -it 243c32535da7 /bin/bash
+
+#退出容器
+exit
+
+#删除容器
+docker rm -f 1e560fca3906
