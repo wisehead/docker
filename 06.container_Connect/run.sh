@@ -48,4 +48,15 @@ ping test1
 #保存apt-get package，提交新镜像
 docker commit -m="apt update" -a="chenhui" ccb9582e9fd2 ubuntu:v2_apt_update
 
+
 #三、配置 DNS
+
+docker run -it --rm  ubuntu  cat etc/resolv.conf
+
+
+#@手动指定容器的配置
+docker run -it --rm -h host_ubuntu  --dns=114.114.114.114 --dns-search=test.com ubuntu
+
+cat /etc/hostname
+cat /etc/hosts
+cat /etc/resolv.conf
